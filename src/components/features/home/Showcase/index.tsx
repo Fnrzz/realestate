@@ -59,8 +59,10 @@ const Showcase = () => {
             >
               <div className="relative w-full h-[200px] md:h-[180px] lg:h-[250px]  min-h-[150px] rounded-3xl overflow-hidden shrink-0">
                 <Image
-                  src={"/assets/home1.avif"}
+                  src={"/assets/home/photo/home1.avif"}
+                  loading="eager"
                   fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   alt="home"
                   className="object-cover"
                 />

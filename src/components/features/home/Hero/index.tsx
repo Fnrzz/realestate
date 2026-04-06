@@ -11,6 +11,7 @@ const Hero = () => {
         alt="hero"
         loading="eager"
         fill
+        sizes="(max-width: 768px) 100vw, 33vw"
         className="object-cover object-center brightness-[0.6]"
       />
       <div className="absolute px-6 py-20 lg:p-15 z-2 w-full h-full flex items-end">

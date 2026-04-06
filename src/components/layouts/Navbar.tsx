@@ -40,16 +40,14 @@ const Navbar = () => {
       >
         <div className="flex items-center gap-2">
           <div
-            className={`flex items-center justify-center bg-white rounded-full shadow-sm transition-all duration-500 ease-in-out overflow-hidden ${
-              isScrolled
-                ? "w-0 h-0 opacity-0 border-0"
-                : "w-12 h-12 opacity-100"
+            className={`w-12 h-12 flex items-center justify-center  transition-all duration-500 ease-in-out overflow-hidden ${
+              isScrolled ? "" : "bg-white rounded-full shadow-sm"
             }`}
           >
             <h6 className="text-lg font-bold text-black">GH</h6>
           </div>
           <h6
-            className={`flex text-xl font-semibold ${isScrolled ? "text-black ml-3" : "text-white"}`}
+            className={`flex text-xl font-semibold ${isScrolled ? "hidden" : "text-white"}`}
           >
             Green<div className="text-primary">House</div>
           </h6>

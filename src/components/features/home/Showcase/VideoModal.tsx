@@ -4,6 +4,7 @@ import {
   Dialog,
   DialogContent,
   DialogTitle,
+  DialogDescription,
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { CirclePlayIcon } from "lucide-react";
@@ -19,6 +20,7 @@ const VideoModal = () => {
             alt="home1"
             fill
             loading="eager"
+            sizes="(max-width: 768px) 100vw, 120px"
             className="object-cover object-center transition-transform duration-300 group-hover:scale-105 pointer-events-none"
           />
           <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors flex items-center justify-center">
@@ -29,7 +31,9 @@ const VideoModal = () => {
 
       <DialogContent className="sm:max-w-4xl p-0 overflow-hidden bg-black border-none focus:outline-none">
         <DialogTitle className="sr-only">Property Showcase Video</DialogTitle>
-
+        <DialogDescription className="sr-only">
+          Watch our property showcase video
+        </DialogDescription>
         <div className="relative w-full aspect-video bg-black flex items-center justify-center">
           <video
             className="w-full h-full object-contain focus:outline-none"

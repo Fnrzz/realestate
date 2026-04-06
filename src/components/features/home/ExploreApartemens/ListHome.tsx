@@ -4,21 +4,21 @@ import ScrollAnimate from "../../animate/ScrollAnimate";
 
 const properties = [
   {
-    image: "/assets/home1.avif",
+    image: "/assets/home/photo/home1.avif",
     price: "$920,000",
     title: "Crystal Heights Residence",
     address: "114 Crystal Heights Drive, California",
     specs: ["3 Beds", "2 Bath", "240 sq. ft."],
   },
   {
-    image: "/assets/home2.avif",
+    image: "/assets/home/photo/home2.avif",
     price: "$920,000",
     title: "Crystal Heights Residence",
     address: "114 Crystal Heights Drive, California",
     specs: ["3 Beds", "2 Bath", "240 sq. ft."],
   },
   {
-    image: "/assets/home3.avif",
+    image: "/assets/home/photo/home3.avif",
     price: "$920,000",
     title: "Crystal Heights Residence",
     address: "114 Crystal Heights Drive, California",
@@ -39,7 +39,9 @@ const ListHome = () => {
             <Image
               src={property.image}
               alt={property.title}
+              loading="eager"
               fill
+              sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover object-right lg:object-center transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute w-full h-full flex p-4">

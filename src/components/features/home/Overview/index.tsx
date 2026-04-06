@@ -9,9 +9,9 @@ const Overview = () => {
           direction="right"
           className="w-full h-full flex flex-col gap-4"
         >
-          <h3 className="lg:w-[70%] text-xl md:text-2xl  font-semibold">
+          <p className="lg:w-[70%] text-xl md:text-2xl  font-semibold">
             Transforming Properties with Tailored Investment Expertise
-          </h3>
+          </p>
           <p className="lg:w-[80%] text-md font-light">
             By leveraging davance data andytics and perzonalized investment
             approach, we deliver results that exceed expectations, helping
