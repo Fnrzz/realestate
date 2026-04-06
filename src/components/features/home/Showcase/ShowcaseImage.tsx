@@ -4,9 +4,9 @@ import Image from "next/image";
 import { useState } from "react";
 
 const images = [
-  "/assets/home1.avif",
-  "/assets/home1-1.avif",
-  "/assets/home1-2.avif",
+  "/assets/home/photo/home1.avif",
+  "/assets/home/photo/home1-1.avif",
+  "/assets/home/photo/home1-2.avif",
 ];
 
 const ShowcaseImage = () => {

@@ -15,7 +15,7 @@ const VideoModal = () => {
       <DialogTrigger asChild>
         <button className="relative z-10 touch-manipulation w-full sm:w-[120px] md:w-[80px] h-[200px] md:h-[50px] relative overflow-hidden rounded-4xl lg:rounded-full shrink-0 group">
           <Image
-            src="/assets/home1.avif"
+            src="/assets/home/photo/home1.avif"
             alt="home1"
             fill
             loading="eager"
@@ -34,10 +34,9 @@ const VideoModal = () => {
           <video
             className="w-full h-full object-contain focus:outline-none"
             controls
-            autoPlay
             playsInline
           >
-            <source src="/assets/home1.webm" type="video/webm" />
+            <source src="/assets/home/video/home1.webm" type="video/webm" />
             Your browser does not support the video tag.
           </video>
         </div>

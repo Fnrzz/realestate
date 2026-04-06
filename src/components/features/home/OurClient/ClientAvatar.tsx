@@ -9,22 +9,19 @@ import { ArrowRightIcon } from "lucide-react";
 
 const clients = [
   {
-    id: 1,
-    src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=128&h=128&q=80",
-    alt: "@client1",
-    fallback: "C1",
+    src: "/assets/avatar/diego.avif",
+    alt: "diego",
+    fallback: "DE",
   },
   {
-    id: 2,
-    src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=128&h=128&q=80",
-    alt: "@client2",
-    fallback: "C2",
+    src: "/assets/avatar/alex.avif",
+    alt: "alex",
+    fallback: "AL",
   },
   {
-    id: 3,
-    src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=128&h=128&q=80",
-    alt: "@client3",
-    fallback: "C3",
+    src: "/assets/avatar/mariola.avif",
+    alt: "mariola",
+    fallback: "MA",
   },
 ];
 
@@ -35,8 +32,8 @@ const ClientAvatar = () => {
       data-aos="fade-left"
     >
       <AvatarGroup>
-        {clients.map((client) => (
-          <Avatar key={client.id} className="w-12 h-12 border-2 border-white">
+        {clients.map((client, index) => (
+          <Avatar key={index} className="w-12 h-12">
             <AvatarImage
               src={client.src}
               alt={client.alt}
@@ -46,7 +43,7 @@ const ClientAvatar = () => {
           </Avatar>
         ))}
 
-        <AvatarGroupCount className="w-12 h-12 text-lg border-2 border-white bg-gray-100">
+        <AvatarGroupCount className="w-12 h-12 text-lg  bg-gray-100">
           <ArrowRightIcon className="w-5 h-5 text-gray-600" />
         </AvatarGroupCount>
       </AvatarGroup>
