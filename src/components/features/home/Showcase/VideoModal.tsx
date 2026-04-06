@@ -13,13 +13,13 @@ const VideoModal = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button className="w-full sm:w-[120px] md:w-[80px] h-[200px] md:h-[50px] relative overflow-hidden rounded-4xl lg:rounded-full shrink-0 group">
+        <button className="relative z-10 touch-manipulation w-full sm:w-[120px] md:w-[80px] h-[200px] md:h-[50px] relative overflow-hidden rounded-4xl lg:rounded-full shrink-0 group">
           <Image
             src="/assets/home1.avif"
             alt="home1"
             fill
             loading="eager"
-            className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
+            className="object-cover object-center transition-transform duration-300 group-hover:scale-105 pointer-events-none"
           />
           <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors flex items-center justify-center">
             <CirclePlayIcon className="text-white w-[40px] h-[40px] md:w-[30px] md:h-[30px]" />

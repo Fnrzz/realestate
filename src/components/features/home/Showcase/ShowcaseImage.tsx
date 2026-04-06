@@ -26,8 +26,8 @@ const ShowcaseImage = () => {
         className="object-cover object-center transition-all duration-300 "
       />
 
-      <div className="absolute top-0 left-0 w-full h-full p-4 flex items-end">
-        <div className="p-2 bg-white rounded-full flex gap-2 shadow-md">
+      <div className="absolute top-0 left-0 w-full h-full p-4 flex items-end pointer-events-none">
+        <div className="p-2 bg-white rounded-full flex gap-2 shadow-md pointer-events-auto relative z-10">
           {images.map((src, index) => (
             <button
               key={index}
@@ -44,7 +44,7 @@ const ShowcaseImage = () => {
                 width={100}
                 height={100}
                 loading="eager"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover pointer-events-none"
               />
             </button>
           ))}

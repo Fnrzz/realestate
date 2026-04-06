@@ -12,7 +12,7 @@ const Hero = () => {
         fill
         className="object-cover object-right lg:object-center"
       />
-      <div className="absolute px-6 py-10 lg:p-15 z-2 w-full h-full flex items-end">
+      <div className="absolute px-6 py-20 lg:p-15 z-2 w-full h-full flex items-end">
         <div className="w-full flex flex-col gap-4">
           <h1
             data-aos="fade-right"
