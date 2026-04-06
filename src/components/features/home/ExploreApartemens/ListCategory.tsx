@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ScrollAnimate from "../../animate/ScrollAnimate";
 
 const categories = [
   "See More Blogs",
@@ -15,7 +16,7 @@ const categories = [
 
 const ListCategory = () => {
   return (
-    <div data-aos="fade-up" className="w-full">
+    <ScrollAnimate direction="up" className="w-full">
       <div className="flex items-center w-full gap-2 py-2 overflow-x-scroll scrollbar-hide scroll-smooth touch-pan-x ">
         {categories.map((category, index) => (
           <Link
@@ -31,7 +32,7 @@ const ListCategory = () => {
           </Link>
         ))}
       </div>
-    </div>
+    </ScrollAnimate>
   );
 };
 

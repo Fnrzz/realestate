@@ -6,6 +6,7 @@ import {
   AvatarImage,
 } from "@/components/ui/avatar";
 import { ArrowRightIcon } from "lucide-react";
+import ScrollAnimate from "../../animate/ScrollAnimate";
 
 const clients = [
   {
@@ -27,9 +28,9 @@ const clients = [
 
 const ClientAvatar = () => {
   return (
-    <div
+    <ScrollAnimate
+      direction="left"
       className="w-full md:w-[40%] flex flex-col sm:flex-row items-center justify-end gap-4"
-      data-aos="fade-left"
     >
       <AvatarGroup>
         {clients.map((client, index) => (
@@ -52,7 +53,7 @@ const ClientAvatar = () => {
         More than <span className="font-semibold">500+</span> <br /> Client
         Reviews
       </p>
-    </div>
+    </ScrollAnimate>
   );
 };
 

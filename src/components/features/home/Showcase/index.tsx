@@ -3,36 +3,40 @@ import { MoveLeftIcon, MoveRightIcon } from "lucide-react";
 import Image from "next/image";
 import VideoModal from "./VideoModal";
 import ShowcaseImage from "./ShowcaseImage";
+import ScrollAnimate from "../../animate/ScrollAnimate";
 
 const Showcase = () => {
   return (
     <section className="flex flex-col gap-8 w-full h-full py-10 px-6 lg:p-15">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
-        <div className="w-full md:w-[50%] lg:w-[40%]" data-aos="fade-right">
+        <ScrollAnimate
+          direction="right"
+          className="w-full md:w-[50%] lg:w-[40%]"
+        >
           <h2 className="text-3xl/10 lg:text-4xl/12 font-light tracking-wide text-center md:text-left">
             <span className="font-semibold">Your primary home</span> might begin
             to feel left out.
           </h2>
-        </div>
-        <div
+        </ScrollAnimate>
+        <ScrollAnimate
+          direction="left"
           className="w-full md:w-[40%] flex flex-col sm:flex-row items-center justify-end gap-4"
-          data-aos="fade-left"
         >
           <VideoModal />
           <p className="text-base md:text-sm lg:text-lg font-light w-full text-center sm:text-left">
             Each listing offers exceptional quality, unique features, and prime
             locations
           </p>
-        </div>
+        </ScrollAnimate>
       </div>
       <div className="flex flex-col lg:flex-row gap-6 lg:h-[500px]">
         <ShowcaseImage />
         <div className="w-full lg:w-[55%] lg:h-full flex flex-col gap-6">
-          <div
-            className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 lg:h-full flex-grow"
-            data-aos="fade-up"
-          >
-            <div className="w-full h-full bg-gray-100 rounded-4xl flex flex-col items-center justify-center gap-4 py-8 px-4 lg:p-4 text-center">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 lg:h-full flex-grow">
+            <ScrollAnimate
+              direction="up"
+              className="w-full h-full bg-gray-100 rounded-4xl flex flex-col items-center justify-center gap-4 py-8 px-4 lg:p-4 text-center"
+            >
               <h3 className="text-2xl md:text-3xl w-[90%] font-medium">
                 Big things can happen in small spaces.
               </h3>
@@ -47,11 +51,11 @@ const Showcase = () => {
               >
                 Details
               </Button>
-            </div>
+            </ScrollAnimate>
 
-            <div
+            <ScrollAnimate
+              direction="down"
               className="w-full h-full bg-gray-100 rounded-4xl flex flex-col justify-between gap-4 p-2 pb-5"
-              data-aos="fade-down"
             >
               <div className="relative w-full h-[200px] md:h-[180px] lg:h-[250px]  min-h-[150px] rounded-3xl overflow-hidden shrink-0">
                 <Image
@@ -70,12 +74,12 @@ const Showcase = () => {
                   Explore Properties <MoveRightIcon className="ml-2 w-4 h-4" />
                 </Button>
               </div>
-            </div>
+            </ScrollAnimate>
           </div>
 
-          <div
+          <ScrollAnimate
+            direction="fade"
             className="flex flex-col md:flex-row items-center justify-between gap-5 mt-auto pt-2"
-            data-aos="fade"
           >
             <p className="text-base md:text-md font-light w-full md:w-[60%] text-center md:text-left">
               Whether it&apos;s creating a cozy corner for relaxation or
@@ -99,7 +103,7 @@ const Showcase = () => {
                 <MoveRightIcon className="w-5 h-5 text-gray-600" />
               </Button>
             </div>
-          </div>
+          </ScrollAnimate>
         </div>
       </div>
     </section>

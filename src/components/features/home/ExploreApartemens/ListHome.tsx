@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import ScrollAnimate from "../../animate/ScrollAnimate";
 
 const properties = [
   {
@@ -29,10 +30,10 @@ const ListHome = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       {properties.map((property, index) => (
-        <div
+        <ScrollAnimate
+          direction={index % 2 === 0 ? "up" : "down"}
           key={index}
           className="flex flex-col gap-4 group cursor-pointer"
-          data-aos={index % 2 === 0 ? "fade-up" : "fade-down"}
         >
           <div className="relative w-full h-[250px] lg:h-[400px] rounded-4xl overflow-hidden">
             <Image
@@ -63,7 +64,7 @@ const ListHome = () => {
               ))}
             </div>
           </div>
-        </div>
+        </ScrollAnimate>
       ))}
     </div>
   );

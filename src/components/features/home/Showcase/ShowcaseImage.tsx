@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import ScrollAnimate from "../../animate/ScrollAnimate";
 
 const images = [
   "/assets/home/photo/home1.avif",
@@ -13,9 +14,9 @@ const ShowcaseImage = () => {
   const [activeImage, setActiveImage] = useState(images[0]);
 
   return (
-    <div
+    <ScrollAnimate
+      direction="up"
       className="relative w-full lg:w-[45%] h-[300px] md:h-[400px] lg:h-full rounded-4xl overflow-hidden shrink-0"
-      data-aos="fade-right"
     >
       <Image
         key={activeImage}
@@ -50,7 +51,7 @@ const ShowcaseImage = () => {
           ))}
         </div>
       </div>
-    </div>
+    </ScrollAnimate>
   );
 };
 
