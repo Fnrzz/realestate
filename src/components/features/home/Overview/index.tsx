@@ -18,7 +18,7 @@ const Overview = () => {
           </p>
         </div>
         <div className="w-full h-full" data-aos="fade-left">
-          <h2 className="text-3xl/10 lg::text-4xl/12 font-light tracking-wide">
+          <h2 className="text-3xl/10 lg:text-4xl/12 font-light tracking-wide">
             <span className="font-semibold">Maximizing Property</span> Growth
             Through Cuttting-Edge Investmen Strategies
           </h2>
