@@ -1,17 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ScrollAnimate from "../../animate/ScrollAnimate";
 
-const images = [
-  "/assets/home/photo/home1.avif",
-  "/assets/home/photo/home1-1.avif",
-  "/assets/home/photo/home1-2.avif",
-];
+export default function ShowcaseImage({ gallery }: { gallery: string[] }) {
+  const [activeImage, setActiveImage] = useState(gallery[0]);
 
-const ShowcaseImage = () => {
-  const [activeImage, setActiveImage] = useState(images[0]);
+  useEffect(() => {
+    setActiveImage(gallery[0]);
+  }, [gallery]);
 
   return (
     <ScrollAnimate
@@ -25,12 +23,12 @@ const ShowcaseImage = () => {
         loading="eager"
         fill
         sizes="(max-width: 1024px) 100vw, 50vw"
-        className="object-cover object-center transition-all duration-300 "
+        className="object-cover object-center transition-all duration-300 animate-in fade-in zoom-in-95"
       />
 
       <div className="absolute top-0 left-0 w-full h-full p-4 flex items-end pointer-events-none">
         <div className="p-2 bg-white rounded-full flex gap-2 shadow-md pointer-events-auto relative z-10">
-          {images.map((src, index) => (
+          {gallery.map((src, index) => (
             <button
               key={index}
               onClick={() => setActiveImage(src)}
@@ -54,6 +52,4 @@ const ShowcaseImage = () => {
       </div>
     </ScrollAnimate>
   );
-};
-
-export default ShowcaseImage;
+}
