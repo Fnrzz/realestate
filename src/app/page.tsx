@@ -1,3 +1,5 @@
+import DiscoverParalax from "@/components/features/home/DiscoverParalax";
+import DiscoverText from "@/components/features/home/DiscoverText";
 import ExploreApartements from "@/components/features/home/ExploreApartemens";
 import Hero from "@/components/features/home/Hero";
 import LastestNews from "@/components/features/home/LastestNews";
@@ -15,6 +17,9 @@ export default function Home() {
       <ExploreApartements />
       <OurClient />
       <LastestNews />
+      <DiscoverParalax />
+      <DiscoverText />
+      <hr className="h-0.5 w-[95%] mx-auto bg-black" />
     </main>
   );
 }
