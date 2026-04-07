@@ -51,7 +51,7 @@ const ListHome = () => {
             </div>
           </div>
           <div className="flex flex-col gap-2">
-            <h3 className="text-2xl font-semibold transition-colors">
+            <h3 className="text-2xl font-medium transition-colors">
               {property.title}
             </h3>
             <p className="text-gray-600">{property.address}</p>
