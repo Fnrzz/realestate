@@ -1,5 +1,6 @@
 import ScrollAnimate from "../../animate/ScrollAnimate";
 import ClientAvatar from "./ClientAvatar";
+import ClientCaraousel from "./ClientCaraousel";
 
 const OurClient = () => {
   return (
@@ -15,6 +16,7 @@ const OurClient = () => {
         </ScrollAnimate>
         <ClientAvatar />
       </div>
+      <ClientCaraousel />
     </section>
   );
 };

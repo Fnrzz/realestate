@@ -35,11 +35,7 @@ const ClientAvatar = () => {
       <AvatarGroup>
         {clients.map((client, index) => (
           <Avatar key={index} className="w-12 h-12">
-            <AvatarImage
-              src={client.src}
-              alt={client.alt}
-              className="object-cover"
-            />
+            <AvatarImage src={client.src} alt={client.alt} />
             <AvatarFallback>{client.fallback}</AvatarFallback>
           </Avatar>
         ))}
